@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lab #4</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div id="output"></div>
+	<script>
+		var newNum = +prompt("Enter a number.");
+        var secNum = +prompt("Enter another number.");
+        var oper = prompt("Please enter an operator.");
+        var calc;
+
+        if (oper === "+")
+        {
+            calc = newNum + secNum;
+        } else if (oper === "-")
+        {
+            calc = newNum - secNum;
+        } else if (oper === "*")
+        {
+           calc = newNum * secNum;
+        } else if (oper === "/")
+        {
+            calc = newNum / secNum;
+        } else if (oper === "%")
+        {
+            calc = newNum % secNum;
+        }
+        
+        var out = newNum + " " + oper + " " + secNum; 
+        out += " = " + calc;
+
+        document.getElementById("output").innerHTML = out;
+	</script>
+</body>
+</html>
